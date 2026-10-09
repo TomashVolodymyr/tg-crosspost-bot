@@ -1,0 +1,19 @@
+# dependencies and build output
+node_modules/
+dist/
+coverage/
+
+# local configuration and secrets
+.env
+.env.*
+!.env.example
+*.session
+
+# personal notes for Claude
+.claude/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
