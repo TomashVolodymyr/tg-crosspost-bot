@@ -14,7 +14,7 @@ A Telegram bot that publishes one post to many places and relays new posts from 
 **Relaying**
 - Watch a source channel and copy each new post into one or more target channels, without the "Forwarded from" header.
 - Rewrite rules applied before posting: replace phone numbers, usernames and links, append a footer, drop posts by keyword.
-- Albums are relayed as albums; edits and deletions in the source are mirrored to the copy.
+- Albums are relayed as albums. Edits in the source are mirrored to the copy; deletions are mirrored for sources read through a user session, because the Bot API does not report deleted channel posts.
 
 **Operations**
 - Management through an admin bot: destinations, relay routes, rules and a publication log.
