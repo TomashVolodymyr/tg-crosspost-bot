@@ -1,0 +1,46 @@
+name: Доробка
+description: Нова можливість або зручніше те, що вже є
+labels: [enhancement]
+body:
+  - type: textarea
+    id: why
+    attributes:
+      label: Навіщо
+      placeholder: Адмін не бачить, чому доставка в канал не вдалась
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Критерій готовності
+      description: Що конкретно має працювати, щоб задачу закрити. Один пункт — одна перевірка.
+      placeholder: |
+        - у журналі біля невдалої доставки видно причину
+        - кнопка «Повторити» переводить доставку в PENDING
+    validations:
+      required: true
+  - type: input
+    id: spec
+    attributes:
+      label: Спека
+      description: Шлях до docs/specs/<N>-<коротко>.md, якщо є
+      placeholder: docs/specs/14-publication-log.md
+  - type: textarea
+    id: scope
+    attributes:
+      label: Межі
+      description: Які файли задача змінює і які не чіпає.
+      placeholder: |
+        Змінюємо:
+        - src/admin-bot/log.menu.ts
+        Не чіпаємо:
+        - prisma/schema.prisma
+    validations:
+      required: true
+  - type: dropdown
+    id: where
+    attributes:
+      label: Де
+      options: [Адмін-бот, Публікація, Перенесення, Facebook, База, Сервер, Документація]
+    validations:
+      required: true

@@ -1,0 +1,39 @@
+name: Помилка
+description: Щось працює не так, як має
+labels: [bug]
+body:
+  - type: textarea
+    id: steps
+    attributes:
+      label: Що робив
+      placeholder: Надіслав боту альбом із 4 фото і опублікував у два канали
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Що очікував
+      placeholder: В обох каналах один альбом із 4 фото
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Що сталося
+      placeholder: У другому каналі чотири окремі пости
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Межі
+      description: Які файли задача змінює і які не чіпає.
+    validations:
+      required: true
+  - type: dropdown
+    id: where
+    attributes:
+      label: Де
+      options: [Адмін-бот, Публікація, Перенесення, Facebook, База, Сервер, Документація]
+    validations:
+      required: true
